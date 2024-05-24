@@ -5,9 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import javax.swing.*;
-import java.time.Duration;
-
 public class test1 {
 
     @Test
@@ -31,7 +28,7 @@ public class test1 {
 
     }
     @Test
-    public void test2(){
+    public void test2(int deltaX){
         ChromeDriver browser = new ChromeDriver();
 
         browser.get("https://www.google.com/?hl=es");
@@ -44,7 +41,7 @@ public class test1 {
 
         actions.sendKeys(Keys.ENTER).perform();
 
-        actions.scrollByAmount(int deltaX:0, int deltaY:2000).perform();
+        actions.scrollByAmount(0, 2000).perform();
 
 
 
