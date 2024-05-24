@@ -1,7 +1,12 @@
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import javax.swing.*;
+import java.time.Duration;
 
 public class test1 {
 
@@ -25,5 +30,25 @@ public class test1 {
 
 
     }
+    @Test
+    public void test2(){
+        ChromeDriver browser = new ChromeDriver();
+
+        browser.get("https://www.google.com/?hl=es");
+
+        WebElement search = browser.findElement(By.name("q"));
+
+        Actions actions = new Actions(browser);
+
+        actions.click(search).sendKeys("Selenium").perform();
+
+        actions.sendKeys(Keys.ENTER).perform();
+
+        actions.scrollByAmount(int deltaX:0, int deltaY:2000).perform();
+
+
+
+    }
+
 
 }
