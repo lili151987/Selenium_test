@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class JunitTestGoogle {
 
     static ChromeDriver browser;
-
+  
 
     //aqui va la parte de reporteria o cualquier funcion que se pueda reestablecer de ultimo
     @BeforeClass
